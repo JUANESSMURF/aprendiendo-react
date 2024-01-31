@@ -1,18 +1,18 @@
+import './App.css'
+import { TwitterFollowCard } from './TwitterFollowCard.jsx'
+
 export function App () {
+    // const formatUseName = (userName) => `@${userName}` /*Se llama a esta funcion para agregar @ a cada username*/
+    const formatUserName = (userName) => (<span>@{userName}</span>)
+
+
+    
     return (
-        <article className='tw-followCard'>
-            <header className='tw-followCard-header'>
-                <img src="https://unavatar.io/twitter/kikobeats" alt=""  className='tw-followCard-avatar'/>
-                <div className='tw-followCard-info'>
-                    <strong>Bartolomeo Castillo Perez</strong>
-                    <span className='tw-followCard-infoUserName'>@bartocast</span>
-                </div>
-            </header>
-            <aside>
-                 <button className='tw-followCard-button'>
-                    Seguir
-                 </button>
-            </aside>
-        </article>
+        <section className='App'>
+            <TwitterFollowCard formatUserName={formatUserName} userName="JE_Odiv" name="JEdiv" />
+            <TwitterFollowCard formatUserName={formatUserName} userName="X" name="X" />
+            <TwitterFollowCard formatUserName={formatUserName} userName="elonmusk" name="Elon Musk" />
+            
+        </section>
     )
 }

@@ -6,3 +6,9 @@ body {
     place-content: center; /*centrado de izquierda a derecha*/
     min-height: 100vh; /*centrado de arriba a abajo*/
 }
+
+.App {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
